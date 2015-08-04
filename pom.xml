@@ -7,6 +7,14 @@
 	<packaging>war</packaging>
 	<name>Example how to integrate Thrift in a Spring application</name>
 	<version>1.0.0</version>
+
+    <!-- Run 'mvn compile' to compile code -->
+    <!-- Run 'mvn jetty:run' to start the server -->
+	<!-- Run 'mvn exec:java' to start the client -->
+	
+	<properties>
+	  <exec.mainClass>de.timwellhausen.example.spring.thriftintegration.client.Client</exec.mainClass>
+	</properties>
 	
 	<build>
 
@@ -53,8 +61,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.2</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>1.7</source>
+					<target>1.7</target>
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
@@ -63,7 +71,6 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.4</version>
 			</plugin>
-            <!-- Local startup: mvn jetty:run -->
 			<plugin>
               <groupId>org.eclipse.jetty</groupId>
               <artifactId>jetty-maven-plugin</artifactId>
